@@ -1,0 +1,670 @@
+﻿Q,A
+The approach focuses on unsupervis,"The approach focuses on unsupervised learning, similar data points tend to belong to similar groups or clusters, as determined by their distance from local centroids."
+Density based anomaly detection,"This approach is based on the K-nearest neighbors algorithm. ItÕs evident that normal data points always occur around a dense neighborhood and abnormalities deviate far away. To measure the nearest set of a data point, you can use Euclidean distance or similar measure according to the type of data you have."
+ Support Vector Machine-Based Anomaly Detection,"The k-means algorithm can be used which partition the dataset into a giA support vector machine is another effective technique for detecting anomalies. One-Class SVMs have been devised for cases in which one class only is known, and the problem is to identify anything outside this class.
+
+This is known as novelty detection, and it refers to automatic identification of unforeseen or abnormal phenomena, i.e. outliers, embedded in a large amount of normal data.
+
+Anomaly detections helps to monitor any data source, including user logs, devices, networks, and servers. This rapidly helps in identifying zero-day attacks as well as unknown security threats.
+ven number of clusters. Any data points that fall outside of these clusters are considered as anomalies."
+Cross-Validation,"Cross-Validation is a statistical method of evaluating and comparing learning algorithms by dividing data into two segments: one used to learn or train a model and the other used to validate the model. 
+
+In typical cross-validation, the training and validation sets must cross-over in successive rounds such that each data point has a chance of being validated against. 
+
+The basic form of cross-validation is k-fold cross-validation. Other forms of cross-validation are special cases of k-fold cross-validation or involve repeated rounds of k-fold cross-validation.
+
+In k-fold cross-validation, the data is first partitioned into k equally (or nearly equally) sized segments or folds. Subsequently k iterations of training and validation are performed such that within each iteration a different fold of the data is held-out for validation while the remaining k ? 1 folds are used for learning. 
+
+So, why do we use cross-validation?
+
+It allows us to get more metrics and draw important conclusion about our algorithm and our data.
+
+Helps to tune the hyper parameters of a given machine learning algorithm, to get good performance according to some suitable metric.
+
+It mitigates overfitting while building a pipeline of models, such that secondÕs models input will be real predictions on data that our first model never seen before.
+
+K-fold cross validation also significantly reduces bias as we are using most of the data for fitting, and also significantly reduces variance as most of the data is also being used in validation set."
+Bagging(Bootstrap aggregation)," It is a homogeneous weak learnersÕ model that learns from each other independently in parallel and combines them for determining the model average. Boosting: It is also a homogeneous weak learnersÕ model. In this model, learners learn sequentially and adaptively to improve model predictions of a learning algorithm.
+
+If the classifier is unstable (high variance), then we need to apply bagging. If the classifier is steady and straightforward (high bias), then we need to apply boosting.
+
+In bagging, different training data subsets are randomly drawn with replacement from the entire training dataset. In boosting, every new subset contains the elements that were misclassified by previous models.
+
+Bagging simplest way of combining predictions that belong to the same type. Boosting is the  way of combining predictions that belong to the different types.
+
+Each model is built independently for bagging. While in the case of boosting, new models are influenced by the performance of previously built models.
+
+Bagging attempts to tackle the overfitting issue. Boosting tries to reduce bias.
+
+Example: The Random Forest model uses Bagging. The AdaBoost uses Boosting techniques"
+Bayes' theorem,"Bayes' theorem, also known as Bayes' rule or Bayes' law, is a theorem in statistics that describes the probability of one event or condition as it relates to another known event or condition.
+
+Mathematically, itÕs expressed as the true positive rate of a condition sample divided by the sum of the false positive rate of the population and the true positive rate of a condition.
+
+LetÕs understand this theorem with an example:
+
+For instance, say you had a 60% chance of actually having the flu after a flu test, but out of people who had the flu, the test will be false 50% of the time, and the overall population only has a 5% chance of having the flu. Would you actually have a 60% chance of having the flu after having a positive test?
+
+BayesÕ Theorem says no. It says that you have a (.6 * 0.05) (True Positive Rate of a Condition Sample) / (.6*0.05)(True Positive Rate of a Condition Sample) + (.5*0.95) (False Positive Rate of a Population)  = 0.0594 or 5.94% chance of getting a flu."
+Naive Bayes classifiers,"Naive Bayes classifiers are a collection of classification algorithms based on BayesÕ Theorem. It is not a single algorithm but a family of algorithms where all of them share a common principle, i.e. every pair of features being classified is independent of each other.
+
+Naive Bayes uses a similar method to predict the probability of different class based on various attributes. This algorithm is mostly used in text classification and with problems having multiple classes."
+Regression cost function,"Regression models are used to forecast a continuous variable, such as an employee's pay, the cost of a car, the likelihood of obtaining a loan, and so on. They are determined as follows depending on the distance-based error:
+                                      Error = y-yÕ
+Where, Y Ð Actual Input and YÕ Ð Predicted output
+"
+Pruning ,"Pruning is a data compression technique in machine learning and search algorithms that reduces the size of decision trees by removing sections of the tree that are non-critical and redundant to classify instances. Pruning reduces the complexity of the final classifier, and hence improves predictive accuracy by the reduction of overfitting.
+Pruning processes can be divided into two types (pre- and post-pruning).
+Pre-pruning procedures prevent a complete induction of the training set by replacing a stop () criterion in the induction algorithm. Pre-pruning methods are considered to be more efficient because they do not induce an entire set, but rather trees remain small from the start
+Post-pruning is the most common way of simplifying trees. Here, nodes and subtrees are replaced with leaves to reduce complexity.
+The procedures are differentiated on the basis of their approach in the tree (top-down or bottom-up).
+Top-down fashion:  It will traverse nodes and trim subtrees starting at the root.
+Bottom-up fashion: It will begin at the leaf nodes.
+
+There is a popular pruning algorithm called reduced error pruning, in which starting at the leaves, each node is replaced with its most popular class. If the prediction accuracy is not affected, the change is kept."
+Accuracy,"Accuracy: A Forecast is more accurate compared to a prediction. This is because forecasts are derived by analyzing a set of past data from the past and presents trends.
+On the other hand, a prediction can be right or wrong. For example, if you predict the outcome of a football match, the result depends on how well the teams played no matter their recent performance or players."
+Bias,"Bias: Forecasting uses mathematical formulas and as a result, they are free from personal as well as intuition bias.
+On the other hand, predictions are in most cases subjective and fatalistic in nature."
+Quantification,"Quantification: When using a model to do a forecast, itÕs possible to come up with the exact quantity. For example, the World Bank uses economic trends, and the previous GDP values and other inputs to come up with a percentage value for a country economic growth. 
+However, when doing prediction, since there is no data for processing, one can only say the economy of a given country will grow or not."
+Data Training set,"Training set: We use the training set for building the model and adjusting the modelÕs variables. But we cannot rely on the correctness of the model build on top of the training set. The model might give incorrect outputs on feeding new inputs.
+Validation set: We use a validation set to look into the modelÕs response on top of the samples that donÕt exist in the training dataset. Then, we will tune hyperparameters on the basis of the estimated benchmark of the validation data.
+When we are evaluating the modelÕs response using the validation set, we are indirectly training the model with the validation set. This may lead to the overfitting of the model to specific data. So, this model wonÕt be strong enough to give the desired response to the real-world data."
+Data Test set,"The test dataset is the subset of the actual dataset, which is not yet used to train the model. The model is unaware of this dataset. So, by using the test dataset, we can compute the response of the created model on hidden data. We evaluate the modelÕs performance on the basis of the test dataset.
+The model is always exposed to the test dataset after tuning the hyperparameters on top of the validation set.
+ As we know, the evaluation of the model on the basis of the validation set would not be enough. Thus, we use a test set for computing the efficiency of the model."
+Outliers,"Outliers are usually defined in relation to the distribution. Thus outliers could be removed in the pre-processing step (before any learning step), by using standard deviations (Mean +/- 2*SD), it can be used for normality. Or interquartile ranges Q1 - Q3, Q1 - is the ""middle"" value in the first half of the rank-ordered data set, Q3 - is the ""middle"" value in the second half of the rank-ordered data set. It can be used for not normal/unknown as threshold levels."
+Backpropagation algorithm,"The Backpropagation algorithm looks for the minimum value of the error function in weight space using a technique called the delta rule or gradient descent. The weights that minimize the error function is then considered to be a solution to the learning problem.
+
+We need backpropagation because,
+
+Calculate the error Ð How far is your model output from the actual output.
+
+Minimum Error Ð Check whether the error is minimized or not.
+
+Update the parameters Ð If the error is huge then, update the parameters (weights and biases). After that again check the error.
+
+Repeat the process until the error becomes minimum.
+
+Model is ready to make a prediction Ð Once the error becomes minimum, you can feed some inputs to your model and it will produce the output."
+Tolerance ,"Tolerance (1 / VIF) is used as an indicator of multicollinearity. It is an indicator of percent of variance in a predictor which cannot be accounted by other predictors. Large values of tolerance are desirable.
+
+We will consider adjusted R? as opposed to R? to evaluate model fit because R? increases irrespective of improvement in prediction accuracy as we add more variables. 
+
+But, adjusted R? would only increase if an additional variable improves the accuracy of model, otherwise stays same. It is difficult to commit a general threshold value for adjusted R? because it varies between data sets.
+
+ For example: a gene mutation data set might result in lower adjusted R? and still provide fairly good predictions, as compared to a stock market data where lower adjusted R? implies that model is not good."
+Describe the decision tree model.,Decision Trees are a type of Supervised Machine Learning Decision Trees are a type of Supervised Machine Learning where the data is continuously split according to a certain parameter. The leaves are the decisions or the final outcomes. A decision tree is a machine learning algorithm that partitions the data into subsets. here the data is continuously split according to a certain parameter. The leaves are the decisions or the final outcomes. A decision tree is a machine learning algorithm that partitions the data into subsets. 
+What is a neural network?,"Neural networks are a set of algorithms, modeled loosely after the human brain, that are designed to recognize patterns. They interpret sensory data through a kind of machine perception, labeling or clustering raw input. They, also known as Artificial Neural Networks, are the subset of Deep Learning."
+Explain the Bias-Variance Tradeoff,The biasÐvariance tradeoff is the property of a model that the variance of the parameter estimated across samples can be reduced by increasing the bias in the estimated parameters.
+WhatÕs the difference between L1 and L2 regularization?,The main intuitive difference between the L1 and L2 regularization is that L1 regularization tries to estimate the median of the data while the L2 regularization tries to estimate the mean of the data to avoid overfitting. That value will also be the median of the data distribution mathematically.
+Difference between array and list, The main difference between these two data types is the operation you can perform on them. Lists are containers for elements having differing data types but arrays are used as containers for elements of the same data type.
+Which is faster dictionary or list for look up,"Dictionary is faster because you used a better algorithm. The reason is because a dictionary is a lookup, while a list is an iteration. Dictionary uses a hash lookup, while your list requires walking through the list until it finds the result from beginning to the result each time."
+How do you handle categorical data?,"One-Hot Encoding is the most common, correct way to deal with non-ordinal categorical data. It consists of creating an additional feature for each group of the categorical feature and mark each observation belonging (Value=1) or not (Value=0) to that group."
+Difference between Correlation and Regression,"The main difference in correlation vs regression is that the measures of the degree of a relationship between two variables; let them be x and y. Here, correlation is for the measurement of degree, whereas regression is a parameter to determine how one variable affects another."
+"Which evaluation metric should you prefer to use for a dataset having a lot of outliers in it? MAE, MSE, RMSE",Mean Absolute Error(MAE) is preferred when we have too many outliers present in the dataset because MAE is robust to outliers whereas MSE and RMSE are very susceptible to outliers and these start penalizing the outliers by squaring the error terms.
+Explain kmeans clustering,K-means clustering aims to partition data into k clusters in a way that data points in the same cluster are similar and data points in the different clusters are farther apart. Similarity of two points is determined by the distance between them.
+How is KNN different from k-means clustering?," K-means clustering represents an unsupervised algorithm, mainly used for clustering, while KNN is a supervised learning algorithm used for classification."
+Explain the difference between an array and a linked list.,"An array is a collection of elements of a similar data type. A linked list is a collection of objects known as a node where node consists of two parts, i.e., data and address. Array elements store in a contiguous memory location. Linked list elements can be stored anywhere in the memory or randomly stored."
+How do you ensure you are not overfitting a model?,Keep your model simple. Use regularization technique. Use cross-validation.
+How do you fix high variance in a model?,"You can reduce High variance, by reducing the number of features in the model. There are several methods available to check which features don't add much value to the model and which are of importance. Increasing the size of the training set can also help the model generalize."
+What are hyperparameters? How do they differ from model parameters?,Model Parameters: These are the parameters in the model that must be determined using the training data set. These are the fitted parameters. Hyperparameters: These are adjustable parameters that must be tuned in order to obtain a model with optimal performance.
+Precision-Recall Trade off,"The Idea behind the precision-recall trade-off is that when a person changes the threshold for determining if a class is positive or negative it will tilt the scales. It means that it will cause precision to increase and recall to decrease, or vice versa."
+Bagging and boosting,Bagging is a way to decrease the variance in the prediction by generating additional data for training from dataset using combinations with repetitions to produce multi-sets of the original data. Boosting is an iterative technique which adjusts the weight of an observation based on the last classification.
+Explain logistic regression,Logistic regression is a statistical analysis method used to predict a data value based on prior observations of a data set. A logistic regression model predicts a dependent data variable by analyzing the relationship between one or more existing independent variables.
+Difference between Precision and Recall.,When it comes to precision we're talking about the true positives over the true positives plus the false positives. As opposed to recall which is the number of true positives over the true positives and the false negatives.
+Assumptions of Linear Regression.,There are four assumptions associated with a linear regression model: Linearity: The relationship between X and the mean of Y is linear. Homoscedasticity: The variance of residual is the same for any value of X. Independence: Observations are independent of each other. The fourth one is normality.
+Difference between Random Forest and Decision Tree.,"A decision tree combines some decisions, whereas a random forest combines several decision trees. Thus, it is a long process, yet slow. Whereas, a decision tree is fast and operates easily on large data sets, especially the linear one. The random forest model needs rigorous training."
+How does K-means work?,"K-means clustering uses ÒcentroidsÓ, K different randomly-initiated points in the data, and assigns every data point to the nearest centroid. After every point has been assigned, the centroid is moved to the average of all of the points assigned to it."
+How do you generally choose among different classification models to decide which one is performing the best?,"Here are some important considerations while choosing an algorithm:
+
+Size of the training data, Accuracy and/or Interpretability of the output, Speed or Training time, Linearity and number of features."
+ How do you perform feature selection?,"Unsupervised: Do not use the target variable (e.g. remove redundant variables). Correlation. 
+
+Supervised: Use the target variable (e.g. remove irrelevant variables). Wrapper: Search for well-performing subsets of features. RFE."
+Why is the KNN Algorithm known as Lazy Learner?,"When the KNN algorithm gets the training data, it does not learn and make a model, it just stores the data. Instead of finding any discriminative function with the help of the training data, it follows instance-based learning and also uses the training data when it actually needs to do some prediction on the unseen datasets. As a result, KNN does not immediately learn a model rather delays the learning thereby being referred to as Lazy Learner."
+What is Masked Language Model in NLP?,Masked language models help learners to understand deep representations in downstream tasks by taking an output from the corrupt input. This model is often used to predict the words to be used in a sentence.
+What is the Impact of Outliers on Logistic Regression?,"The estimates of the Logistic Regression are sensitive to unusual observations such as outliers, high leverage, and influential observations. Therefore, to solve the problem of outliers, a sigmoid function is used in Logistic Regression."
+How do you handle missing values in your data?,"One common approach is to impute the missing values using statistical techniques such as mean, median, or mode imputation. Another approach is to use machine learning algorithms that can handle missing values, such as decision trees or k-nearest neighbors. If the missing values are related to a specific feature or subset of the data, we can also consider using a more targeted approach, such as regression imputation or multiple imputation."
+Can you explain the difference between supervised and unsupervised learning?,"Supervised learning is a type of machine learning where the algorithm learns from labeled data, where the target variable or outcome is already known. The algorithm uses this labeled data to identify patterns and relationships, and then applies this learning to new, unseen data to make predictions or classifications. In contrast, unsupervised learning is used when there is no target variable or outcome variable to be predicted, and the algorithm is tasked with finding patterns and relationships within the data on its own."
+How do you decide which machine learning algorithm to use for a particular problem?,"The choice of machine learning algorithm depends on several factors, including the type of problem, the nature of the data, and the available computational resources. Some common factors to consider when selecting a machine learning algorithm include the size of the dataset, the number of features, the desired level of interpretability, the complexity of the relationships between the features and the target variable, and the computational resources available for training and testing the model. "
+"What is regularization, and why is it important in machine learning?","Regularization is a technique used in machine learning to prevent overfitting, which occurs when a model is too complex and fits the training data too closely, leading to poor performance on new, unseen data. Regularization works by adding a penalty term to the loss function that the model is optimizing, which discourages the model from relying too heavily on any one feature or set of features."
+What are Nested Triggers?,"Triggers may implement DML by using INSERT, UPDATE, and DELETE statements. These triggers that contain DML and find other triggers for data modification are called Nested Triggers."
+What do you mean by a Bag of Words (BOW)?,"It is used for word frequency or occurrences to train a classifier.
+It contains a text representation that describes the frequency with which words appear in a document.
+It has two steps:
+-A list of terms that are well-known.
+-A metric for determining the existence of well-known terms. "
+ What is a True positive rate and a false positive rate?,"True positive rate or Recall: It gives us the percentage of the true positives captured by the model out of all the Actual Positive class.
+
+TPR = TP/ (TP+FN)
+
+False Positive rate: It gives us the percentage of all the false positives by my model prediction from the all Actual  Negative class.
+
+FPR = FP/(FP+TN)"
+Explain some cases where k-Means clustering fails to give good results,"
+k-means has trouble clustering data where clusters are of various sizes and densities.
+Outliers will cause the centroids to be dragged, or the outliers might get their own cluster instead of being ignored. Outliers should be clipped or removed before clustering.
+If the number of dimensions increase, a distance-based similarity measure converges to a constant value between any given examples. Dimensions should be reduced before clustering them."
+List the advantages NumPy Arrays have over Python lists,"PythonÕs lists, even though hugely efficient containers capable of a number of functions, have several limitations when compared to NumPy arrays. It is not possible to perform vectorised operations which includes element-wise addition and multiplication. They also require that Python store the type information of every element since they support objects of different types. This means a type dispatching code must be executed each time an operation on an element is done. "
+Define the term 'Data Wrangling.,"Data Wrangling is the process wherein raw data is cleaned, structured, and enriched into a desired usable format for better decision making. It involves discovering, structuring, cleaning, enriching, validating, and analyzing data. This process can turn and map out large amounts of data extracted from various sources into a more useful format."
+What are the best methods for data cleaning?,"Create a data cleaning plan by understanding where the common errors take place and keep all the communications open. Before working with the data, identify and remove the duplicates. This will lead to an easy and effective data analysis process.Focus on the accuracy of the data. Set cross-field validation, maintain the value types of data, and provide mandatory constraints.Normalize the data at the entry point so that it is less chaotic. You will be able to ensure that all information is standardized, leading to fewer errors on entry."
+What is the Principle Component Analysis?PCA,"The idea here is to reduce the dimensionality of the data set by reducing the number of variables that are correlated with each other. Although the variation needs to be retained to the maximum extent.
+The variables are transformed into a new set of variables that are known as Principal ComponentsÕ. These PCs are the eigenvectors of a covariance matrix and therefore are orthogonal."
+Can you mention some advantages and disadvantages of decision trees?,"The advantages of decision trees are that they are easier to interpret, are nonparametric and hence robust to outliers, and have relatively few parameters to tune.
+On the other hand, the disadvantage is that they are prone to overfitting."
+Explain One-hot encoding and Label Encoding. How do they affect the dimensionality of the given dataset?,"One-hot encoding is the representation of categorical variables as binary vectors. Label Encoding is converting labels/words into numeric form. Using one-hot encoding increases the dimensionality of the data set. Label encoding doesnÕt affect the dimensionality of the data set. One-hot encoding creates a new variable for each level in the variable whereas, in Label encoding, the levels of a variable get encoded as 1 and 0."
+Explain One-hot encoding and Label Encoding. How do they affect the dimensionality of the given dataset?,"One-hot encoding is the representation of categorical variables as binary vectors. Label Encoding is converting labels/words into numeric form. Using one-hot encoding increases the dimensionality of the data set. Label encoding doesnÕt affect the dimensionality of the data set. One-hot encoding creates a new variable for each level in the variable whereas, in Label encoding, the levels of a variable get encoded as 1 and 0."
+Compare K-means and KNN Algorithms. ,"K-Means is unsupervised. K-Means is a clustering algorithm. The points in each cluster are similar to each other, and each cluster is different from its neighboring clusters. KNN is supervised in nature. KNN is a classification algorithm It classifies an unlabeled observation based on its K (can be any number) surrounding neighbors."
+What is Machine Learning,"Machine learning is a type of artificial intelligence
+that allows computer systems to automatically
+learn from data and improve their performance on
+a specific task without being explicitly
+programmed. It is based on the idea that
+machines can learn from examples and
+experience, rather than being explicitly
+programmed to perform a specific task."
+Application of Machine Learning,"Image Recognition
+Speech Recognition
+Recommender Systems
+Fraud Detection
+Self Driving Cars
+Medical Diagnosis
+Stock Market Trading
+Virtual Try On"
+Artificial Intelligence,"AI refers to the development of machines or
+software that can perform tasks that typically require human intelligence.
+Examples of AI include speech recognition software, autonomous
+vehicles, and intelligent personal assistants like Siri or Alexa."
+Deep Learning,"DL is a type of ML that uses neural networks
+with multiple layers to learn and make predictions. Examples of DL
+include image recognition software, language translation software,
+and autonomous vehicles."
+Data Science,"Data Science is an interdisciplinary field that involves
+using statistical and computational methods to extract insights and
+knowledge from data. Examples of Data Science include analyzing
+customer data to identify patterns and trends, building predictive
+models to forecast sales, and creating visualizations to communicate
+data insights."
+Classification,"Classification is a type of supervised learning technique used to predict
+the class or category of a new observation based on labeled training
+data.
+
+Classification is a way to identify a grouping technique for a given
+dataset in such away that depending on a value of the target or output
+attribute, the entire dataset can be qualified to belong to a class.
+
+This technique helps in identifying the data behavior patterns. This is, in
+short, a discrimination mechanism.
+
+For example, a spam filter is a common example of classification, where
+the algorithm is trained to classify an email as spam or not spam based
+on previous labeled examples.  Examples:
+
+Email spam filtering: Classifying emails as either spam or not spam
+based on the contents of the email.
+
+Image classification: Identifying objects in an image and labeling them
+according to their category (e.g., dog, cat, bird, etc.).
+
+Fraud detection: Identifying whether a transaction is fraudulent or
+legitimate based on historical data and other factors."
+Clustering,"Clustering is an unsupervised learning technique used to group similar
+observations into clusters based on their features or attributes.
+
+The goal of clustering is to identify natural groupings within the data
+that can be used to gain insights or make predictions.
+
+In short, clustering is a classification analysis that does not start with a
+specific target in mind (good/bad, will buy/will not buy).
+
+For example, clustering can be used to group customers based on their
+purchasing behavior, or to group patients based on their health status.
+
+Examples:
+
+Customer segmentation: Grouping customers with similar purchase
+patterns together to better understand their behavior."
+Regression,"Regression is a type of supervised learning in which an algorithm learns
+to predict a continuous numerical value or output based on a set of
+input features.
+
+The goal of regression is to create a model that accurately predicts the
+output value of new, unseen data.
+
+For example, in housing price prediction, regression can be used to
+predict the price of a house based on features such as its location, size,
+and number of rooms.                      Housing price prediction: Predicting the price of a house based on its
+location, size, and other features.
+
+Stock market prediction: Predicting the future price of a stock based on
+its historical performance and other factors."
+Simulation,"Simulation is a technique used to generate synthetic data based on a set
+of assumptions and rules.
+
+Simulations can be used to model complex systems or processes that
+are difficult or expensive to study in the real world.
+
+For example, in traffic simulation, a computer model can be used to
+simulate traffic patterns and optimize traffic flow through a city.
+Similarly, climate modeling can be used to simulate the Earth's climate
+and predict future climate patterns.                               Traffic simulation: Simulating traffic patterns to better understand how
+traffic flows through a city and to optimize traffic flow.
+
+Climate modeling: Simulating the Earth's climate to better understand
+the effects of climate change and to predict future climate patterns."
+,
+Optimization,"Optimization is a technique used to find the best solution to a problem,
+given a set of constraints and objectives.
+
+Optimization problems can involve maximizing or minimizing an
+objective function subject to certain constraints.
+
+For example, in supply chain optimization, the goal is to optimize the
+logistics of a supply chain to reduce costs and improve efficiency.
+Portfolio optimization is another example in which the goal is to
+optimize the allocation of investments to maximize returns while
+minimizing risk.  Optimization is a technique used to find the best solution to a problem,
+given a set of constraints and objectives.
+
+Optimization problems can involve maximizing or minimizing an
+objective function subject to certain constraints.
+
+For example, in supply chain optimization, the goal is to optimize the
+logistics of a supply chain to reduce costs and improve efficiency.
+
+Portfolio optimization is another example in which the goal is to
+optimize the allocation of investments to maximize returns while
+minimizing risk. Resource allocation is yet another example in which the
+goal is to optimize the allocation of resources, such as personnel, time,
+and equipment, to maximize efficiency and minimize costs."
+Supervised Learning,"Supervised learning is the types of machine learning in which
+machines are trained using well ""labelled"" training data, and on
+basis of that data, machines predict the output. The labelled data
+means some input data is already tagged with the correct output.
+
+In supervised learning, the training data provided to the machines
+work as the supervisor that teaches the machines to predict the
+output correctly. It applies the same concept as a student learns in
+the supervision of the teacher.            Supervised learning is a process of providing input data as well as correct
+output data to the machine learning model. The aim of a supervised
+learning algorithm is to find a mapping function to map the input
+variable(x) with the output variable(y).
+
+In the real-world, supervised learning can be used for Risk Assessment,
+Image classification, Fraud Detection, spam filtering, etc."
+Unsupervised Learning,"Unsupervised learning is a type of machine learning in which
+models are trained using unlabeled dataset and are allowed to act
+on that data without any supervision.
+
+Unsupervised learning cannot be directly applied to a regression or
+classification problem because unlike supervised learning, we have
+the input data but no corresponding output data.
+
+The goal of unsupervised learning is to find the underlying
+structure of dataset, group that data according to similarities, and
+represent that dataset in a compressed format.       Example: Suppose the unsupervised learning algorithm is given an
+input dataset containing images of different types of cats and dogs.
+
+The algorithm is never trained upon the given dataset, which
+means it does not have any idea about the features of the dataset.
+The task of the unsupervised learning algorithm is to identify the
+image features on their own.
+
+Unsupervised learning algorithm will perform this task by clustering
+the image dataset into the groups according to similarities between
+images."
+Reinforcement Learning,"Reinforcement learning is a subfield of machine learning that
+involves training agents to make decisions by maximizing a
+cumulative reward signal.
+
+In simple terms, reinforcement learning involves a feedback
+loop between an agent and its environment. The agent takes
+actions in the environment and receives feedback in the form
+of a reward signal. The goal of the agent is to learn a policy that
+maximizes the expected cumulative reward over time"
+Machine Learning Lifecycle,"Gathering Data
+
+Data preparation
+
+Data Wrangling
+
+Analyse Data
+
+Train the model
+
+Test the model
+
+Deployment
+
+In this step, we need to identify the different data sources, as data can be collected from various sources such
+as files, database, internet, or mobile devices. It is one of the most important steps of the life cycle. The
+quantity and quality of the collected data will determine the efficiency of the output. The more will be the data,
+the more accurate will be the prediction.
+
+This step includes the below tasks:
+
+Identify various data sources
+
+Collect data
+
+Integrate the data obtained from different sources
+
+Data preparation
+
+In this step, first, we put all data together, and then randomize the ordering of data.
+
+This step can be further divided into two processes:
+
+Data exploration:
+
+It is used to understand the nature of data that we have to work with. We need to understand the
+characteristics, format, and quality of data.
+A better understanding of data leads to an effective outcome. In this, we find Correlations, general trends,
+and outliers.
+
+Data pre-processing:
+Now the next step is preprocessing of data for its analysis.
+
+Analyse Data
+
+Selection of analytical techniques
+
+Building models
+
+Review the result
+
+The aim of this step is to build a machine learning model to analyze the data using various analytical
+techniques and review the outcome.
+
+It starts with the determination of the type of the problems, where we select the machine learning
+techniques such as Classification, Regression, Cluster analysis, Association, etc. then build the model using
+prepared data, and evaluate the model.
+
+Train the model
+
+Now the next step is to train the model, in this step we train our model to improve its performance for better
+outcome of the problem.
+
+We use datasets to train the model using various machine learning algorithms.
+
+Test the model
+
+Once our machine learning model has been trained on a given dataset, then we test the model. In this step,
+we check for the accuracy of our model by providing a test dataset to it.
+
+Deployment
+
+The last step of machine learning life cycle is deployment, where we deploy the model in the real-world"
+,
+,
+Confusion Matrix,"The confusion matrix is a matrix used to determine the performance of the classification
+models for a given set of test data. It can only be determined if the true values for test
+data are known. The matrix itself can be easily understood, but the related terminologies
+may be confusing. Since it shows the errors in the model performance in the form of a
+matrix, hence also known as anÊerror matrix. Some features of Confusion matrix are
+given below:
+o For the 2 prediction classes of classifiers, the matrix is of 2*2 table, for 3 classes,
+it is 3*3 table, and so on.
+o The matrix is divided into two dimensions, that areÊpredicted valuesÊandÊactual
+valuesÊalong with the total number of predictions.
+o Predicted values are those values, which are predicted by the model, and actual
+values are the true values for the given observations.   True Negative:ÊModel has given prediction No, and the real or actual value was
+also No.
+o True Positive:ÊThe model has predicted yes, and the actual value was also true.
+o False Negative:ÊThe model has predicted no, but the actual value was Yes, it is
+also called asÊType-II error.
+o False Positive:ÊThe model has predicted Yes, but the actual value was No. It is
+also called aÊType-I error."
+Regression Analysis in Machine learning,"Regression analysis is a statistical method to model the relationship between a
+dependent (target) and independent (predictor) variables with one or more independent
+variables. More specifically, Regression analysis helps us to understand how the value
+of the dependent variable is changing corresponding to an independent variable when
+other independent variables are held fixed. It predicts continuous/real values such
+asÊtemperature, age, salary, price,Êetc."
+Why do we use Regression Analysis?,"Regression analysis helps in the prediction of a continuous variable. There are various
+scenarios in the real world where we need some future predictions such as weather
+condition, sales prediction, marketing trends, etc., for such case we need some
+technology which can make predictions more accurately. So for such case we need
+Regression analysis which is a statistical method and used in machine learning and
+data science. Below are some other reasons for using Regression analysis:
+o Regression estimates the relationship between the target and the independent
+variable.
+o It is used to find the trends in data.
+o It helps to predict real/continuous values.
+o By performing the regression, we can confidently determine theÊmost important
+factor, the least important factor, and how each factor is affecting the other
+factors."
+Random Forest,"""Random Forest is a classifier that contains a number of decision trees on
+various subsets of the given dataset and takes the average to improve the
+predictive accuracy of that dataset."" Instead of relying on one decision tree,
+the random forest takes the prediction from each tree and based on the
+majority votes of predictions, and it predicts the final output.
+
+It can be used for both Classification and Regression problems in ML. It is based
+on the concept of ensemble learning, which is a process of combining multiple
+classifiers to solve a complex problem and to improve the performance of the
+model.
+
+The greater number of trees in the forest leads to higher accuracy and
+prevents the problem of overfitting."
+Why is it called Na•ve Bayes?,"Na•ve: It is called Na•ve because it assumes that the occurrence of a
+certain feature is independent of the occurrence of other features. Such
+as if the fruit is identified on the bases of color, shape, and taste, then
+red, spherical, and sweet fruit is recognized as an apple. Hence each
+feature individually contributes to identify that it is an apple without
+depending on each other.   Working of Na•ve Bayes' Classifier:
+
+So to solve problem, we need to follow the below steps:
+
+Convert the given dataset into frequency tables.
+
+Generate Likelihood table by finding the probabilities of given features.
+
+Now, use Bayes theorem to calculate the posterior probability."
+Instance-based learning methods,"Instance-based learning methods simply store the training examples
+instead of learning explicit description of the target function.
+
+Ð Generalizing the examples is postponed until a new instance
+must be classified.
+
+Ð When a new instance is encountered, its relationship to the
+stored examples is examined in order to assign a target function
+value
+for the new instance.
+
+¥ Instance-based methods are sometimes referred to as lazy learning
+methods because they"
+How KNN work ?,"The K-NN working can be explained on the basis of the below
+algorithm:
+
+Step-1: Select the number K of the neighbors
+
+Step-2: Calculate the Euclidean distance.
+
+Step-3: Take the K nearest neighbors as per the calculated Euclidean
+distance.
+
+Step-4: Among these k neighbors, count the number of the data
+points in each category.
+
+Step-5: Assign the new data points to that category for which the
+number of the neighbor is maximum.
+
+Step-6: Our model is ready."
+Unsupervised Learning algorithms,"K-means clustering
+o KNN (k-nearest neighbors)
+o Hierarchal clustering
+o Anomaly detection
+o Neural Networks
+o Principle Component Analysis
+o Independent Component Analysis
+o Apriori algorithm
+o Singular value decomposition"
+Types of Clustering,"Hierarchical clustering
+? Partitioning clustering
+Hierarchical clustering is further subdivided into:
+? Agglomerative clustering
+? Divisive clustering
+Partitioning clustering is further subdivided into:
+? K-Means clustering
+? Fuzzy C-Means clustering"
+Applications of Clustering,"In Identification of Cancer Cells: The clustering algorithms are widely used for the
+identification of cancerous cells. It divides the cancerous and non-cancerous data sets
+into different groups.
+o In Search Engines: Search engines also work on the clustering technique. The search
+result appears based on the closest object to the search query. It does it by grouping
+similar data objects in one group that is far from the other dissimilar objects. The
+accurate result of a query depends on the quality of the clustering algorithm used.
+o Customer Segmentation: It is used in market research to segment the customers
+based on their choice and preferences.
+o In Biology: It is used in the biology stream to classify different species of plants and
+animals using the image recognition technique.
+o In Land Use: The clustering technique is used in identifying the area of similar lands
+use in the GIS database. This can be very useful to find that for what purpose the
+particular land should be used, that means for which purpose it is more suitable."
+Association Rule Learning,"Association rule learning is a type of unsupervised learning technique that checks for the
+dependency of one data item on another data item and maps accordingly so that it can be
+more profitable. It tries to find some interesting relations or associations among the variables
+of dataset. It is based on different rules to discover the interesting relations between variables
+in the database.
+The association rule learning is one of the very important concepts of machine learning, and
+it is employed in Market Basket analysis, Web usage mining, continuous production,
+etc. Here market basket analysis is a technique used by the various big retailer to discover the
+associations between items. We can understand it by taking an example of a supermarket, as
+in a supermarket, all products that are purchased together are put together.
+For example, if a customer buys bread, he most likely can also buy butter, eggs, or milk, so
+these products are stored within a shelf or mostly nearby.                                Association rule learning can be divided into three types of algorithms:
+1. Apriori
+2. Eclat
+3. F-P Growth Algorithm"
+Apriori Algorithm,"This algorithm uses frequent datasets to generate association rules. It is designed to work on
+the databases that contain transactions. This algorithm uses a breadth-first search and Hash
+Tree to calculate the itemset efficiently.
+It is mainly used for market basket analysis and helps to understand the products that can be
+bought together. It can also be used in the healthcare field to find drug reactions for patients.                                   The Apriori algorithm uses frequent itemsets to generate association rules, and it is
+designed to work on the databases that contain transactions. With the help of these
+association rule, it determines how strongly or how weakly two objects are connected.
+This algorithm uses a breadth-first search and Hash Tree to calculate the itemset
+associations efficiently. It is the iterative process for finding the frequent itemsets from
+the large dataset.
+This algorithm was given by the R. Agrawal and Srikant in the year 1994. It is mainly
+used for market basket analysis and helps to find those products that can be bought
+together. It can also be used in the healthcare field to find drug reactions for patients."
+Eclat Algorithm,"Eclat algorithm stands for Equivalence Class Transformation. This algorithm uses a depth-
+first search technique to find frequent itemsets in a transaction database. It performs faster
+
+execution than Apriori Algorithm."
+F-P Growth Algorithm,"The F-P growth algorithm stands for Frequent Pattern, and it is the improved version of the
+Apriori Algorithm. It represents the database in the form of a tree structure that is known as a"
+Applications of Association Rule Learning,"o Market Basket Analysis: It is one of the popular examples and applications of
+association rule mining. This technique is commonly used by big retailers to
+determine the association between items.
+o Medical Diagnosis: With the help of association rules, patients can be cured easily,
+as it helps in identifying the probability of illness for a particular disease.
+o Protein Sequence: The association rules help in determining the synthesis of
+artificial Proteins.
+o It is also used for the Catalog Design and Loss-leader Analysis and many more other
+applications."
+What is Model Selection in Machine Learning?,"The process of selecting models among different mathematical models, which are used to describe the same data set is known as Model Selection. Model selection is applied to the fields of statistics, machine learning and data mining."
+What is the difference between heuristic for rule learning and heuristics for decision trees?,The difference is that the heuristics for decision trees evaluate the average quality of a number of disjointed sets while rule learners only evaluate the quality of the set of instances that is covered with the candidate rule.
+What are the two classification methods that SVM ( Support Vector Machine) can handle?,"Combining binary classifiers
+Modifying binary to incorporate multiclass learning"
+What is ensemble learning?,"To solve a particular computational program, multiple models such as classifiers or experts are strategically generated and combined. This process is known as ensemble learning.  Ensemble learning is used to improve the classification, prediction, function approximation etc of a model.
+ Ensemble learning is used when you build component classifiers that are more accurate and independent from each other."
+What is dimension reduction in Machine Learning?,"In Machine Learning and statistics, dimension reduction is the process of reducing the number of random variables under considerations and can be divided into feature selection and feature extraction.
+"
+What are support vector machines?,Support vector machines are supervised learning algorithms used for classification and regression analysis.
+ What are the components of relational evaluation techniques?,"Data Acquisition
+Ground Truth Acquisition
+Cross Validation Technique
+Query Type
+Scoring Metric
+Significance Test"
+What is the general principle of an ensemble method and what is bagging and boosting in ensemble method?,The general principle of an ensemble method is to combine the predictions of several models built with a given learning algorithm in order to improve robustness over a single model. Bagging is a method in ensemble for improving unstable estimation or classification schemes. While boosting method are used sequentially to reduce the bias of the combined model. Boosting and Bagging both can reduce errors by reducing the variance term.
+What is bias-variance decomposition of classification error in ensemble method?,The expected error of a learning algorithm can be decomposed into bias and variance. A bias term measures how closely the average classifier produced by the learning algorithm matches the target function. The variance term measures how much the learning algorithmÕs prediction fluctuates for different training sets.
+What is the use of the Loss functions?,"The loss function is used as a measure of accuracy to identify whether our neural network has learned the patterns accurately or not with the help of the training data.
+This is completed by comparing the training data with the testing data.
+
+Therefore, the loss function is considered as a primary measure for the performance of the neural network. In Deep Learning, a good-performing neural network will have a low value of the loss function at all times when training happens."
+What is the role of the Activation functions in Neural Networks?,"The reason for using activation functions in Neural Networks are as follows:
+
+1. The idea behind the activation function is to introduce nonlinearity into the neural network so that it can learn more complex functions.
+
+2. Without the Activation function, the neural network behaves as a linear classifier, learning the function which is a linear combination of its input data.
+
+3. The activation function converts the inputs into outputs.
+
+4. The activation function is responsible for deciding whether a neuron should be activated i.e, fired or not.
+
+5. To make the decision, firstly it calculates the weighted sum and further adds bias with it."
+List down the names of some popular Activation Functions used in Neural Networks.,"
+This article was published as a part of the Data Science Blogathon
+
+Introduction
+Artificial Neural Networks are computing systems that are inspired by the working of the Human Neuron. It is the backbone of Deep Learning that led to the achievement of bigger milestones in almost all the fields thereby bringing an evolution in which we approach a problem.
+
+Therefore it becomes necessary for every aspiring Data Scientist and Machine Learning Engineer to have a good knowledge of these Neural Networks.
+
+In this article, we will discuss the most important questions on the Artificial Neural Networks (ANNs) which is helpful to get you a clear understanding of the techniques, and also for Data Science Interviews, which covers its very fundamental level to complex concepts.
+
+LetÕs get started,
+1. What do you mean by Perceptron?
+A perceptron also called an artificial neuron is a neural network unit that does certain computations to detect features.
+
+It is a single-layer neural network used as a linear classifier while working with a set of input data. Since perceptron uses classified data points which are already labeled, it is a supervised learning algorithm. This algorithm is used to enable neurons to learn and process elements in the training set one at a time.
+
+Deep Learning Interview Questions 4 | Artificial Neural Networks
+
+Image Source: Google Images
+
+2. What are the different types of Perceptrons?
+There are two types of perceptrons:
+
+1. Single-Layer Perceptrons
+
+Single-layer perceptrons can learn only linearly separable patterns.
+
+2. Multilayer Perceptrons
+
+Multilayer perceptrons, also known as feedforward neural networks having two or more layers have a higher processing power.
+
+3. What is the use of the Loss functions?
+The loss function is used as a measure of accuracy to identify whether our neural network has learned the patterns accurately or not with the help of the training data.
+This is completed by comparing the training data with the testing data.
+
+Therefore, the loss function is considered as a primary measure for the performance of the neural network. In Deep Learning, a good-performing neural network will have a low value of the loss function at all times when training happens.
+
+4. What is the role of the Activation functions in Neural Networks?
+The reason for using activation functions in Neural Networks are as follows:
+
+1. The idea behind the activation function is to introduce nonlinearity into the neural network so that it can learn more complex functions.
+
+2. Without the Activation function, the neural network behaves as a linear classifier, learning the function which is a linear combination of its input data.
+
+3. The activation function converts the inputs into outputs.
+
+4. The activation function is responsible for deciding whether a neuron should be activated i.e, fired or not.
+
+5. To make the decision, firstly it calculates the weighted sum and further adds bias with it.
+
+6. So, the basic purpose of the activation function is to introduce non-linearity into the output of a neuron.
+
+5. List down the names of some popular Activation Functions used in Neural Networks.
+Some of the popular activation functions that are used while building the deep learning models are as follows:
+Sigmoid function
+Hyperbolic tangent function
+Rectified linear unit (RELU) function
+Leaky RELU function
+Maxout function
+Exponential Linear unit (ELU) function"
+how does Machine Learning works,"A Machine Learning systemÊlearns from historical data, builds the prediction models, and whenever it receives new data, predicts the output for it. The accuracy of predicted output depends upon the amount of data, as the huge amount of data helps to build a better model which predicts the output more accurately."
+opportunities for machine learning,"Specific Jobs in AI
+1) Machine Learning Researchers.
+2) AI Engineer.
+3) Data Mining and Analysis.
+4) Machine Learning Engineer.
+5) Data Scientist.
+6) Business Intelligence (BI) Developer."
+why use Python for Machine Learning and AI?," Benefits that make Python the best fit for machine learning and AI-based projects include simplicity and consistency, access to great libraries and frameworks for AI and machine learning (ML), flexibility, platform independence, and a wide community. These add to the overall popularity of the language."
